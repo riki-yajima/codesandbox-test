@@ -1,10 +1,14 @@
-import "./styles.css";
+// 分割代入
+// オブジェクト、配列
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+const myPro = {
+  name: "sato",
+  age: "28"
+};
+
+const message1 = `名前は${myPro.name}です。年は${myPro.age}です。`;
+console.log(message1);
+
+const { name, age } = myPro;
+const message2 = `名前は${name}です。年は${age}です。`;
+console.log(message2);
